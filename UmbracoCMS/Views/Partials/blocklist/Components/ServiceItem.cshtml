@@ -1,0 +1,17 @@
+﻿@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<Umbraco.Cms.Core.Models.Blocks.BlockListItem>;
+@using ContentModels = Umbraco.Cms.Web.Common.PublishedModels;
+@{
+    var content = (ContentModels.ServiceItem)Model.Content;
+}
+
+
+<div class="bg-neutral border-2 border-white-100 w-full min-h-[350px] overflow-hidden">
+	<div class="block no-underline">
+		<h4 class="p-[1.5rem] font-semibold text-primary">@content.ServiceTitle</h4>
+		@if (content.ServiceImage != null)
+		{
+			<img src="@content.ServiceImage.Url()" alt="@content.ServiceTitle" class="w-full object-cover" />
+		}
+		<p class="text-sm p-[1.5rem]">@content.ServiceText</p>
+	</div>
+</div>
