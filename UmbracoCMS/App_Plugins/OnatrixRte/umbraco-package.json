@@ -14,6 +14,98 @@
             },
             "items": [
                 {
+                    "label": "Headings",
+                    "items": [
+                        {
+                            "label": "H1 - 50",
+                            "items": [
+                                {
+                                    "label": "Light",
+                                    "data": {
+                                        "tag": "h1",
+                                        "class": "text-rte-h1 font-light"
+                                    },
+                                    "appearance": {}
+                                },
+                                {
+                                    "label": "Normal",
+                                    "data": {
+                                        "tag": "h1",
+                                        "class": "text-rte-h1 font-regular"
+                                    },
+                                    "appearance": {}
+                                },
+                                {
+                                    "label": "Bold",
+                                    "data": {
+                                        "tag": "h1",
+                                        "class": "text-rte-h1 font-bold"
+                                    },
+                                    "appearance": {}
+                                }
+                            ]
+                        },
+                        {
+                            "label": "H2 - 40",
+                            "items": [
+                                {
+                                    "label": "Light",
+                                    "data": {
+                                        "tag": "h2",
+                                        "class": "text-rte-h2 font-light"
+                                    },
+                                    "appearance": {}
+                                },
+                                {
+                                    "label": "Normal",
+                                    "data": {
+                                        "tag": "h2",
+                                        "class": "text-rte-h2 font-regular"
+                                    },
+                                    "appearance": {}
+                                },
+                                {
+                                    "label": "Bold",
+                                    "data": {
+                                        "tag": "h2",
+                                        "class": "text-rte-h2 font-bold"
+                                    },
+                                    "appearance": {}
+                                }
+                            ]
+                        },
+                        {
+                            "label": "H3 - 30",
+                            "items": [
+                                {
+                                    "label": "Light",
+                                    "data": {
+                                        "tag": "h3",
+                                        "class": "text-rte-h3 font-light"
+                                    },
+                                    "appearance": {}
+                                },
+                                {
+                                    "label": "Normal",
+                                    "data": {
+                                        "tag": "h3",
+                                        "class": "text-rte-h3 font-regular"
+                                    },
+                                    "appearance": {}
+                                },
+                                {
+                                    "label": "Bold",
+                                    "data": {
+                                        "tag": "h3",
+                                        "class": "text-rte-h3 font-bold"
+                                    },
+                                    "appearance": {}
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
                     "label": "Paragraphs",
                     "items": [
                         {
@@ -155,8 +247,20 @@
                     "label": "Bullets",
                     "data": {
                         "tag": "ul",
-                        "class":  "rte-ul"
+                        "class": "rte-ul"
                     }
+                },
+                {
+                    "label": "Images",
+                    "items": [
+                        {
+                            "label": "Full width",
+                            "data": {
+                                "tag": "img",
+                                "class": "img-original"
+                            }
+                        }
+                    ]
                 }
             ]
         },
