@@ -45,6 +45,7 @@
     --color-body-text: #535656;
     --color-body-text-100: #999999;
     --color-border-gray: #EAEAEA;
+    --color-footer: #0E0E0E;
     --font-poppins: "poppins", sans-serif;
     --text-rte-xl: 4.375rem;
     --text-rte-lg: 2.5rem;
@@ -270,9 +271,6 @@
   .mx-\[2rem\] {
     margin-inline: 2rem;
   }
-  .mx-\[2trem\] {
-    margin-inline: 2trem;
-  }
   .mx-auto {
     margin-inline: auto;
   }
@@ -440,6 +438,9 @@
   }
   .bg-border-gray {
     background-color: var(--color-border-gray);
+  }
+  .bg-footer {
+    background-color: var(--color-footer);
   }
   .bg-green-50 {
     background-color: var(--color-green-50);

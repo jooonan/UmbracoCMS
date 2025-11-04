@@ -74,6 +74,30 @@ namespace Umbraco.Cms.Web.Common.PublishedModels
 		public virtual string ContactPhone => this.Value<string>(_publishedValueFallback, "contactPhone");
 
 		///<summary>
+		/// Credited Name
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "16.2.0+4eae48e")]
+		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		[ImplementPropertyType("footerCreditedName")]
+		public virtual string FooterCreditedName => this.Value<string>(_publishedValueFallback, "footerCreditedName");
+
+		///<summary>
+		/// Credited Url
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "16.2.0+4eae48e")]
+		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		[ImplementPropertyType("footerCreditedUrl")]
+		public virtual string FooterCreditedUrl => this.Value<string>(_publishedValueFallback, "footerCreditedUrl");
+
+		///<summary>
+		/// Text
+		///</summary>
+		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "16.2.0+4eae48e")]
+		[global::System.Diagnostics.CodeAnalysis.MaybeNull]
+		[ImplementPropertyType("footerText")]
+		public virtual string FooterText => this.Value<string>(_publishedValueFallback, "footerText");
+
+		///<summary>
 		/// Platform List
 		///</summary>
 		[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Umbraco.ModelsBuilder.Embedded", "16.2.0+4eae48e")]

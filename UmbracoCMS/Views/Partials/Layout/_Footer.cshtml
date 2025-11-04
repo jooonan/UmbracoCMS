@@ -1,0 +1,12 @@
+﻿@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage
+
+@{
+	var rootContent = Umbraco.ContentAtRoot();
+	var siteSettings = rootContent.OfType<SiteSettings>().FirstOrDefault();
+}
+
+<div class="bg-footer">
+	<div class ="max-w-7xl mx-auto p-4 flex">
+		<p class="text-primary text-sm">@siteSettings?.FooterText <a class="text-secondary cursor-pointer" href="@siteSettings?.FooterCreditedUrl" target="_blank">@siteSettings?.FooterCreditedName</a></p>
+	</div>
+</div>
