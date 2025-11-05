@@ -1,0 +1,30 @@
+﻿@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<Umbraco.Cms.Core.Models.Blocks.BlockListItem>;
+@using ContentModels = Umbraco.Cms.Web.Common.PublishedModels;
+@{
+    var content = (ContentModels.TrustedSection)Model.Content;
+}
+
+<section class="relative pt-[5.5rem]">
+	<div class="container max-w-7xl mx-auto px-4 relative z-10 flex flex-col gap-2 items-center">
+		<div class="w-8/12 flex flex-col gap-2 items-center">
+			<h1 class="text-[4.5rem] text-primary font-bold">@content.TrustedClientTitle</h1>
+			<div class="rte">@Html.Raw(content.TrustedClientText)</div>
+			@if (content.TrustedClientLink != null)
+			{
+				<a class="bg-primary text-white mt-5 py-3 px-10 no-underline rounded cursor-pointer font-bold" href="@content.TrustedClientLink.Url">@content.TrustedClientLink.Name</a>
+			}
+
+			<div class="absolute inset-0 -z-999 top-[4.5rem] h-[22rem] overflow-hidden">
+				<img src="~/images/dot-map-1.svg"/>
+			</div>
+
+		</div>
+
+		<div class="mt-[8rem]">
+			@if (content.TrustedGroupImage != null)
+			{
+				<img src="@content.TrustedGroupImage.Url()" alt="Alternate Text"/>
+			}
+		</div>
+	</div>
+</section>

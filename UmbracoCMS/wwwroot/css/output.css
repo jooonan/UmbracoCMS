@@ -235,8 +235,14 @@
   .inset-y-0 {
     inset-block: calc(var(--spacing) * 0);
   }
+  .top-\[4\.5rem\] {
+    top: 4.5rem;
+  }
   .right-3 {
     right: calc(var(--spacing) * 3);
+  }
+  .-z-999 {
+    z-index: calc(999 * -1);
   }
   .z-10 {
     z-index: 10;
@@ -280,6 +286,9 @@
   .mt-\[-11rem\] {
     margin-top: -11rem;
   }
+  .mt-\[8rem\] {
+    margin-top: 8rem;
+  }
   .mb-4 {
     margin-bottom: calc(var(--spacing) * 4);
   }
@@ -304,8 +313,32 @@
   .h-8 {
     height: calc(var(--spacing) * 8);
   }
+  .h-\[22rem\] {
+    height: 22rem;
+  }
+  .h-\[24rem\] {
+    height: 24rem;
+  }
+  .h-\[25rem\] {
+    height: 25rem;
+  }
+  .h-\[26rem\] {
+    height: 26rem;
+  }
+  .h-\[28\.5rem\] {
+    height: 28.5rem;
+  }
+  .h-\[200px\] {
+    height: 200px;
+  }
   .h-\[220px\] {
     height: 220px;
+  }
+  .h-\[450px\] {
+    height: 450px;
+  }
+  .h-\[500px\] {
+    height: 500px;
   }
   .h-full {
     height: 100%;
@@ -513,6 +546,9 @@
   }
   .pt-5 {
     padding-top: calc(var(--spacing) * 5);
+  }
+  .pt-\[5\.5rem\] {
+    padding-top: 5.5rem;
   }
   .pr-10 {
     padding-right: calc(var(--spacing) * 10);
