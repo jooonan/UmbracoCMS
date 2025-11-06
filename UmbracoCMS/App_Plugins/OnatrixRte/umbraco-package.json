@@ -305,6 +305,14 @@
                         "class": "text-body-text-100"
                     },
                     "appearance": { "style": "background-color:#999999; color:#fff; padding:5px;" }
+                },
+                {
+                    "label": "Neutral",
+                    "data": {
+                        "tag": "span",
+                        "class": "text-neutral"
+                    },
+                    "appearance": { "style": "background-color:#FFFFFF; color:#000000; padding:5px;" }
                 }
             ]
         }

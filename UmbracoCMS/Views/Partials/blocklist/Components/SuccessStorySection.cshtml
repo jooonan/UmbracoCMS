@@ -1,0 +1,38 @@
+﻿@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<Umbraco.Cms.Core.Models.Blocks.BlockListItem>;
+@using ContentModels = Umbraco.Cms.Web.Common.PublishedModels;
+@{
+    var content = (ContentModels.SuccessStorySection)Model.Content;
+    var storyList = content.SuccessStoryList;
+}
+
+<section class="py-[4rem] bg-primary relative pb-[27rem]">
+    <div class="container max-w-7xl mx-auto px-4 relative z-10 flex gap-2 flex-col items-center">
+        <div>
+            @content.SuccessStoryTitle
+        </div>
+
+        <div class="grid grid-cols-3 pt-1 pb-1 -mx-2">
+            @if (storyList != null)
+            {
+                for (var i = 0; i < storyList.Count; i++)
+                {
+                    var storyItem = storyList[i];
+
+                    <div class="px-2">
+                        <partial name="Partials/BlockList/Components/SuccessStoryItem" model="storyItem" />
+                    </div>
+
+                }
+            }
+        </div>
+
+        <div class="absolute left-15 -z-999 top-[.8rem] w-9/10 overflow-hidden">
+            <img src="~/images/dot-map-2.svg" />
+        </div>
+
+        <div class="absolute z-1 top-[23.8rem] w-78/100">
+            <img src="@content.SuccessStoryImage?.Url()" alt="Alternate Text" />
+        </div>
+
+    </div>
+</section>

@@ -8,7 +8,7 @@
 	<div class="container max-w-7xl mx-auto px-4 relative z-10 flex flex-col gap-2 items-center">
 		<div class="w-8/12 flex flex-col gap-2 items-center">
 			<h1 class="text-[4.5rem] text-primary font-bold">@content.TrustedClientTitle</h1>
-			<div class="rte">@Html.Raw(content.TrustedClientText)</div>
+			<div class="rte mt-5">@Html.Raw(content.TrustedClientText)</div>
 			@if (content.TrustedClientLink != null)
 			{
 				<a class="bg-primary text-white mt-5 py-3 px-10 no-underline rounded cursor-pointer font-bold" href="@content.TrustedClientLink.Url">@content.TrustedClientLink.Name</a>
@@ -20,7 +20,7 @@
 
 		</div>
 
-		<div class="mt-[8rem]">
+		<div class="mt-[6.5rem]">
 			@if (content.TrustedGroupImage != null)
 			{
 				<img src="@content.TrustedGroupImage.Url()" alt="Alternate Text"/>
