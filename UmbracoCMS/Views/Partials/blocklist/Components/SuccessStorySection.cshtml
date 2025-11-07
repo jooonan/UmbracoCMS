@@ -14,14 +14,11 @@
         <div class="grid grid-cols-3 pt-1 pb-1 -mx-2">
             @if (storyList != null)
             {
-                for (var i = 0; i < storyList.Count; i++)
+                foreach (var storyItem in storyList)
                 {
-                    var storyItem = storyList[i];
-
                     <div class="px-2">
                         <partial name="Partials/BlockList/Components/SuccessStoryItem" model="storyItem" />
                     </div>
-
                 }
             }
         </div>
