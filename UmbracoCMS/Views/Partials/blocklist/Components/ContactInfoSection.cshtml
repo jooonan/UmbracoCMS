@@ -1,0 +1,57 @@
+﻿@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<Umbraco.Cms.Core.Models.Blocks.BlockListItem>;
+@using ContentModels = Umbraco.Cms.Web.Common.PublishedModels;
+@{
+    var content = (ContentModels.ContactInfoSection)Model.Content;
+    var settings = Model.Settings as ContentModels.ContactInfoSettings;
+
+    var sectionColor = settings?.ContactInfoBackgroundColor?.Color ?? "#ffffff";
+
+    var rootContent = Umbraco.ContentAtRoot();
+    var siteSettings = rootContent.OfType<SiteSettings>().FirstOrDefault();
+
+    var contactAddress = siteSettings?.ContactAddress ?? "Ingen adrdress angiven";
+    var contactPhone = siteSettings?.ContactPhone ?? "Inget nummer angivet";
+    var contactEmail = siteSettings?.ContactEmail ?? "Ingen email angiven";
+}
+
+<section class="pt-[3rem]" style="background-color: @sectionColor;">
+    <div class="max-w-7xl mx-auto px-[5rem] flex gap-[7rem] items-center">
+
+        <div class="w-7/12">
+            <img src="@content.ContactInfoImage?.Url()"  />
+        </div>
+
+        <div class="flex flex-col w-5/12 gap-10">
+            <h2 class="text-[2.5rem] text-primary font-bold">@content.ContactInfoTitle</h2>
+
+            <div class="flex">
+                <i class="fa-solid fa-location-dot text-secondary"></i>
+
+                <div class="flex flex-col mx-2 gap-1">
+                    <p class="text-primary text-sm font-semibold">Office Location</p>
+                    <p class="text-body-text text-sm">@contactAddress</p>
+                </div>
+            </div>
+
+            <div class="flex">
+                <i class="fa-solid fa-phone-flip text-secondary"></i>
+
+                <div class="flex flex-col mx-2 gap-1">
+                    <p class="text-primary text-sm font-semibold">Phone number</p>
+                    <p class="text-body-text text-sm">@contactPhone</p>
+                </div>
+            </div>
+
+            <div class="flex">
+                <i class="fa-solid fa-envelope text-secondary pt-[.1rem]"></i>
+
+                <div class="flex flex-col mx-2 gap-1">
+                    <p class="text-primary text-sm font-semibold">E-mail address</p>
+                    <p class="text-body-text text-sm">@contactEmail</p>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</section>
