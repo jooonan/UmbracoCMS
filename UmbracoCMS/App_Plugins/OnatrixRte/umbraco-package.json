@@ -254,7 +254,7 @@
                     "label": "Images",
                     "items": [
                         {
-                            "label": "Full width",
+                            "label": "Original width",
                             "data": {
                                 "tag": "img",
                                 "class": "img-original"
