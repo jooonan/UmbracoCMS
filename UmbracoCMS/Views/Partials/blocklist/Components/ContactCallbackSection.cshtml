@@ -1,0 +1,51 @@
+﻿@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<Umbraco.Cms.Core.Models.Blocks.BlockListItem>;
+@using ContentModels = Umbraco.Cms.Web.Common.PublishedModels;
+@using UmbracoCMS.ViewModels
+@{
+    var content = (ContentModels.ContactCallbackSection)Model.Content;
+    var settings = Model.Settings as ContentModels.ContactCallbackSettings;
+
+    var formVM = new CallbackFormViewModel()
+    {
+        Options = settings?.CallbackRequestOptions ?? []
+    };
+
+}
+
+<section class="relative">
+    <div class="flex items-center">
+        <div>
+            <img src="@content.ContactCallbackImage?.Url()" class="brightness-75" />
+        </div>
+
+        <div class="absolute z-10 inset-0 flex items-center justify-center px-4 top-[25rem]">
+            <div class="container max-w-7xl flex flex-col items-center bg-neutral shadow-lg px-8 pb-[3rem] pt-[3.5rem]">
+
+                <div class="w-5/12 flex flex-col gap-4">
+                    <p class="">@Html.Raw(content.ContactCallbackBody)</p>
+                </div>
+
+                <div class="w-11/12">
+                    <partial name="Partials/Forms/CallbackForm" model="formVM" view-data='@(new ViewDataDictionary(ViewData) { { "IsHorizontal", true } })' />
+                </div>
+
+                <div class="p-4">
+                    @if (TempData["FormSuccess"] != null)
+                    {
+                        <div class="bg-green-50 text-green-700 rounded-md">
+                            @TempData["FormSuccess"];
+                        </div>
+                    }
+                    else if (TempData["FormError"] != null)
+                    {
+                        <div class="bg-red-50 text-red-700 rounded-md">
+                            @TempData["FormError"];
+                        </div>
+                    }
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</section>

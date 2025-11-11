@@ -1,5 +1,5 @@
 ﻿.form-btn {
-    @apply w-full bg-accent text-primary text-center font-bold rounded-md cursor-pointer select-none py-3 px-12 text-[1.125rem];
+    @apply text-center font-bold rounded-md cursor-pointer select-none py-3 px-12 text-[1.125rem];
 }
 
 .input-validation-error {
